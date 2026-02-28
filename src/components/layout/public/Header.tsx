@@ -95,7 +95,7 @@ export default function Header() {
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="Menu"
-                className="lg:hidden p-2 rounded-xl hover:bg-primary/10 transition-all active:scale-90 text-foreground"
+                className={`lg:hidden p-2 rounded-xl transition-all active:scale-90 z-[60] relative ${isMenuOpen ? 'text-white' : 'hover:bg-primary/10 text-foreground'}`}
               >
                 {isMenuOpen ? (
                   <HiX className="w-6 h-6" />
@@ -108,31 +108,35 @@ export default function Header() {
 
           {/* Mobile Menu */}
           <div className={`
-            lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-2xl border-b border-border-light shadow-2xl transition-all duration-300 ease-in-out overflow-hidden
-            ${isMenuOpen ? 'max-h-[80vh] opacity-100 py-6' : 'max-h-0 opacity-0 py-0'}
+            lg:hidden fixed top-0 left-0 right-0 bg-primary shadow-2xl transition-all duration-500 ease-in-out overflow-hidden z-50
+            ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}
           `}>
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 py-6 pt-20">
               <ul className="flex flex-col gap-1">
                 {navLinks.map((link, idx) => (
                   <li
                     key={link.href}
-                    className={`transition-all duration-300 delay-[${idx * 50}ms] ${isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'}`}
+                    style={{ transitionDelay: isMenuOpen ? `${idx * 50}ms` : '0ms' }}
+                    className={`transition-all duration-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-8 opacity-0'}`}
                   >
                     <Link
                       href={link.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="flex items-center justify-between py-3.5 px-4 rounded-xl text-base font-semibold text-foreground/70 hover:text-primary hover:bg-primary/5 transition-all"
+                      className="flex items-center justify-between py-4 px-5 rounded-xl text-base font-bold text-white hover:bg-white/10 transition-all backdrop-blur-sm"
                     >
                       {link.label}
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary/20" />
+                      <span className="w-2 h-2 rounded-full bg-white/30" />
                     </Link>
                   </li>
                 ))}
-                <li className={`mt-4 pt-4 border-t border-border-light transition-all duration-300 delay-300 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+                <li
+                  style={{ transitionDelay: isMenuOpen ? '300ms' : '0ms' }}
+                  className={`mt-6 pt-6 border-t border-white/20 transition-all duration-500 ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
+                >
                   <Link
                     href="/conta"
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center gap-3 py-4 px-4 rounded-xl text-base font-bold text-white bg-primary hover:bg-primary-hover shadow-lg shadow-primary/20 transition-all active:scale-[0.98]"
+                    className="flex items-center gap-3 py-4 px-5 rounded-xl text-base font-bold text-primary bg-white hover:bg-white/90 shadow-lg transition-all active:scale-[0.98]"
                   >
                     <HiUser className="w-5 h-5" />
                     Minha Conta
