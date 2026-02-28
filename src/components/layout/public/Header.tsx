@@ -15,7 +15,7 @@ export default function Header() {
     { label: "Novidades", href: "/novidades" },
     { label: "Promoções", href: "/promocoes" },
     { label: "Lojas", href: "/lojas" },
-    { label: "Contacto", href: "/contacto" },
+    { label: "Contacto", href: "/contact" },
   ];
 
   return (
