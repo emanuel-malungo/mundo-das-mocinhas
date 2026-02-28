@@ -171,8 +171,8 @@ export default function ProductsPage() {
                                     key={cat}
                                     onClick={() => setActiveCategory(cat)}
                                     className={`px-5 py-2 rounded-xl text-xs font-black uppercase tracking-wider transition-all whitespace-nowrap ${activeCategory === cat
-                                            ? "bg-primary text-white shadow-lg shadow-primary/25"
-                                            : "bg-gray-50 text-foreground/40 hover:bg-white hover:shadow-md hover:text-primary"
+                                        ? "bg-primary text-white shadow-lg shadow-primary/25"
+                                        : "bg-gray-50 text-foreground/40 hover:bg-white hover:shadow-md hover:text-primary"
                                         }`}
                                 >
                                     {cat}
@@ -221,7 +221,7 @@ export default function ProductsPage() {
                         {paginatedProducts.map((product) => (
                             <div
                                 key={product.id}
-                                className="group relative flex flex-col bg-white rounded-[2rem] border border-gray-50 shadow-xs hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 overflow-hidden"
+                                className="group relative flex flex-col bg-white rounded-4xl border border-gray-50 shadow-xs hover:shadow-xl hover:shadow-primary/5 transition-all duration-500 overflow-hidden"
                             >
                                 <div className="relative aspect-4/5 overflow-hidden bg-gray-50">
                                     <Image
@@ -313,8 +313,8 @@ export default function ProductsPage() {
                                         key={page}
                                         onClick={() => setCurrentPage(page)}
                                         className={`w-12 h-12 rounded-2xl text-sm font-black transition-all ${currentPage === page
-                                                ? "bg-primary text-white shadow-xl shadow-primary/25"
-                                                : "bg-gray-50 text-foreground/40 hover:bg-white hover:shadow-md hover:text-primary"
+                                            ? "bg-primary text-white shadow-xl shadow-primary/25"
+                                            : "bg-gray-50 text-foreground/40 hover:bg-white hover:shadow-md hover:text-primary"
                                             }`}
                                     >
                                         {page}

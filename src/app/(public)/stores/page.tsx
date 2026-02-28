@@ -163,7 +163,7 @@ export default function StoresPage() {
                         {/* Visual Mockup of a store screen */}
                         <div className="relative aspect-9/16 max-w-sm mx-auto animate-in zoom-in duration-1000 shadow-[0_0_100px_rgba(253,102,195,0.2)]">
                             <div className="absolute inset-0 bg-primary/20 rounded-[3rem] blur-3xl -z-10 animate-pulse" />
-                            <div className="relative h-full w-full bg-white rounded-[2.5rem] border-[12px] border-gray-900 overflow-hidden shadow-2xl flex flex-col">
+                            <div className="relative h-full w-full bg-white rounded-[2.5rem] border-12 border-gray-900 overflow-hidden shadow-2xl flex flex-col">
                                 {/* Mock Digital Screen Content */}
                                 <div className="relative h-2/3">
                                     <Image src="/hero-model.png" alt="Screen model" fill className="object-cover" />

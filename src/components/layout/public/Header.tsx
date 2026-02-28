@@ -83,12 +83,13 @@ export default function Header() {
                   2
                 </span>
               </Link>
-              <button
+              <Link
+                href="/login"
                 aria-label="Conta"
                 className="hidden sm:flex p-2 sm:p-2.5 rounded-xl hover:bg-primary/10 hover:text-primary text-foreground/60 transition-all active:scale-90"
               >
                 <HiUser className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
-              </button>
+              </Link>
 
               <div className="w-px h-6 bg-border-light mx-1 lg:hidden" />
 
