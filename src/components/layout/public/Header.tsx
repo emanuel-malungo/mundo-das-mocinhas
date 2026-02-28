@@ -14,7 +14,7 @@ export default function Header() {
     { label: "Loja", href: "/loja" },
     { label: "Novidades", href: "/novidades" },
     { label: "Promoções", href: "/promocoes" },
-    { label: "Lojas", href: "/lojas" },
+    { label: "Lojas", href: "/contact#lojas" },
     { label: "Contacto", href: "/contact" },
   ];
 
@@ -36,7 +36,7 @@ export default function Header() {
                   priority
                 />
               </div>
-              <span className="hidden lg:block text-xl font-extrabold tracking-tight bg-linear-to-r from-primary via-primary-dark to-primary bg-clip-text text-transparent bg-[length:200%_auto] hover:bg-[100%_0] transition-all duration-500">
+              <span className="hidden lg:block text-xl font-extrabold tracking-tight bg-linear-to-r from-primary via-primary-dark to-primary bg-clip-text text-transparent bg-size-[200%_auto] hover:bg-[100%_0] transition-all duration-500">
                 Mundo das Mocinhas
               </span>
             </Link>
@@ -64,7 +64,8 @@ export default function Header() {
               >
                 <HiSearch className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
               </button>
-              <button
+              <Link
+                href="/favorites"
                 aria-label="Favoritos"
                 className="hidden sm:flex p-2 sm:p-2.5 rounded-xl hover:bg-primary/10 hover:text-primary text-foreground/60 transition-all relative active:scale-90"
               >
@@ -72,8 +73,9 @@ export default function Header() {
                 <span className="absolute top-1 right-1 w-4 h-4 bg-primary text-white text-[10px] font-bold rounded-full flex items-center justify-center ring-2 ring-white">
                   3
                 </span>
-              </button>
-              <button
+              </Link>
+              <Link
+                href="/cart"
                 aria-label="Carrinho"
                 className="p-2 sm:p-2.5 rounded-xl hover:bg-primary/10 hover:text-primary text-foreground/60 transition-all relative active:scale-90"
               >
@@ -81,7 +83,7 @@ export default function Header() {
                 <span className="absolute top-1 right-1 w-4 h-4 bg-primary text-white text-[10px] font-bold rounded-full flex items-center justify-center ring-2 ring-white">
                   2
                 </span>
-              </button>
+              </Link>
               <button
                 aria-label="Conta"
                 className="hidden sm:flex p-2 sm:p-2.5 rounded-xl hover:bg-primary/10 hover:text-primary text-foreground/60 transition-all active:scale-90"
@@ -89,13 +91,13 @@ export default function Header() {
                 <HiUser className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
               </button>
 
-              <div className="w-[1px] h-6 bg-border-light mx-1 lg:hidden" />
+              <div className="w-px h-6 bg-border-light mx-1 lg:hidden" />
 
               {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="Menu"
-                className={`lg:hidden p-2 rounded-xl transition-all active:scale-90 z-[60] relative ${isMenuOpen ? 'text-white' : 'hover:bg-primary/10 text-foreground'}`}
+                className={`lg:hidden p-2 rounded-xl transition-all active:scale-90 z-60 relative ${isMenuOpen ? 'text-white' : 'hover:bg-primary/10 text-foreground'}`}
               >
                 {isMenuOpen ? (
                   <HiX className="w-6 h-6" />

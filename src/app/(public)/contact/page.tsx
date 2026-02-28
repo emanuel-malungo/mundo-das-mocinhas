@@ -66,7 +66,7 @@ export default function ContactPage() {
                 </section>
 
                 {/* 🧩 2️⃣ BLOCO PRINCIPAL — CONTATO RÁPIDO & FORMULÁRIO */}
-                <section className="py-16 md:py-24 bg-white">
+                <section id="lojas" className="py-16 md:py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="grid lg:grid-cols-2 gap-16 items-start">
 
@@ -159,7 +159,7 @@ export default function ContactPage() {
                             </div>
 
                             {/* ✉️ 3️⃣ COLUNA 2 — FORMULÁRIO DE CONTACTO */}
-                            <div className="bg-[#FFF5FB]/50 p-8 md:p-10 rounded-[3rem] border border-primary/10">
+                            <div className="bg-[#FFF5FB]/50 p-8 md:p-10 rounded-4xl border border-primary/10">
                                 <div className="mb-8">
                                     <h2 className="text-3xl font-extrabold text-foreground mb-2">Envie uma mensagem</h2>
                                     <p className="text-foreground/60 font-medium">Alguma dúvida ou sugestão? Estamos ouvindo!</p>
