@@ -1,6 +1,7 @@
 "use client";
 
 import Header from "@/components/layout/public/Header";
+import Footer from "@/components/layout/public/Footer";
 import { HiMail, HiPhone, HiLocationMarker, HiClock, HiChevronDown } from "react-icons/hi";
 import { FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
@@ -325,6 +326,8 @@ export default function ContactPage() {
                 </section>
 
             </main>
+
+            <Footer />
 
             {/* Mobile Fix WhatsApp Button */}
             <Link
